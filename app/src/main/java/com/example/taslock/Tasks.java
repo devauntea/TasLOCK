@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,11 +18,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Tasks extends AppCompatActivity {
-    DatabaseReference databasePosts;
+    DatabaseReference databaseTasks;
     //FirebaseAuth firebaseAuth;
     //FirebaseAuth.AuthStateListener authStateListener;
     ChildEventListener PostsEventListener;
-    TaskPostAdapter ForumPostsAdapter;
+    TaskPostAdapter TaskPostsAdapter;
     ArrayList<taskedPosts> Posts = new ArrayList<>();
 
 
@@ -31,5 +30,12 @@ public class Tasks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
+        ListView tasksView = findViewById(R.id.tasked_view);
+
+        TaskPostsAdapter = new TaskPostAdapter(this, Posts);
+        tasksView.setAdapter(TaskPostAdapter);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        databaseTasks = database.getReference().child("Posts");
     }
 }
