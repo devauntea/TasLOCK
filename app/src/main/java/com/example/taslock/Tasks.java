@@ -66,4 +66,8 @@ public class Tasks extends AppCompatActivity {
             }
         });
     }
+    public void creat(View view) {
+        Intent intent = new Intent(this, addTask.class);
+        startActivity(intent);
+    }
 }
