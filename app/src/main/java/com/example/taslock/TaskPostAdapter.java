@@ -28,4 +28,5 @@ public class TaskPostAdapter extends ArrayAdapter<taskedPosts> {
         //otherwise, load the default profile icon.
         return convertView;
     }
+
 }
