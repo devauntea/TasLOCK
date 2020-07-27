@@ -17,15 +17,16 @@ public class TaskPostAdapter extends ArrayAdapter<taskedPosts> {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.tasked_list_iteam, parent, false);
         taskedPosts taskmessage = getItem(position);
+
         TextView topicTextView = convertView.findViewById(R.id.topicTextView);
-        topicTextView.setText(taskmessage.getPostMsg());
+        topicTextView.setText(taskmessage.getTeacher());
+
         TextView timeTextView = convertView.findViewById(R.id.timeTextView);
         timeTextView.setText(taskmessage.getTitle());
+
         TextView teacherTextView = convertView.findViewById(R.id.teacherTextView);
         teacherTextView.setText(taskmessage.getTitle());
-        //Use a cool circular ImageView for the profile pic. This comes from the library dependecy you imported.
-        //if there is a profile pic from the authenticated user, load that.
-        //otherwise, load the default profile icon.
+
         return convertView;
     }
 

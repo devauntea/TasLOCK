@@ -14,8 +14,7 @@
         <activity android:name=".addTask" />
         <activity android:name=".Tasks" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/FullScreen">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
