@@ -6,11 +6,11 @@ public class taskedPosts {
     int Time; //the text of the message being sent
     //int start;
 
-    public taskedPosts(String title, String time, String post) {
+    public taskedPosts(String title, String time, String Teacher) {
 
     }
 
-    public taskedPosts(String Title, String PostMsg) {
+    public taskedPosts(String Title, int Time, String Teacher) {
         this.Title = Title;
         this.Time = Time;
         this.Teacher = Teacher;
@@ -31,16 +31,16 @@ public class taskedPosts {
     }
 
     public void setTeacher(String Title) {
-        this.Title = Teacher;
+        this.Teacher = Teacher;
     }
 
-    public int getPostMsg() {
+    /*public int getPostMsg() {
         return Time;
     }
 
     public void setPostMsg(int PostMsg) {
         this.Time = Time;
-    }
+    }*/
 
     //public int getStart() { return start;}
 

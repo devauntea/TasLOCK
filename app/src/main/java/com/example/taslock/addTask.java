@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class addTask extends AppCompatActivity {
     EditText TitleView;
     EditText TimeView;
-    EditText StartView;
+    EditText TeacherView;
     DatabaseReference databasePosts;
     boolean clicked = false;
 
@@ -25,7 +25,7 @@ public class addTask extends AppCompatActivity {
         setContentView(R.layout.activity_add_task);
         TitleView = findViewById(R.id.eventTitle);
         TimeView = findViewById(R.id.eventTime);
-        StartView = findViewById(R.id.startTime);
+        TeacherView = findViewById(R.id.teacher);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databasePosts = database.getReference().child("Posts");
 
@@ -57,11 +57,13 @@ public class addTask extends AppCompatActivity {
         TitleView.setText("");
         String time = TimeView.getText().toString();
         TimeView.setText("");
+        String teacher = TeacherView.getText().toString();
+        TeacherView.setText("");
 
         Intent intent = new Intent( addTask.this, Tasks.class);
         startActivity(intent);
 
-        taskedPosts postMessage  = new taskedPosts(title,time);
+        taskedPosts postMessage  = new taskedPosts(title,time,teacher);
         databasePosts.push().setValue(postMessage);
         closeKeyboard();
         clicked = false;

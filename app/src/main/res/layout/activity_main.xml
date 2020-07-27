@@ -87,8 +87,8 @@
         android:layout_marginBottom="248dp"
         android:background="@drawable/btn2"
         android:gravity="center"
-        android:text="Look at Our Paid Options"
         android:onClick="test"
+        android:text="Look at Our Paid Options"
         android:textColor="#2b2d42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,10 +133,16 @@
         android:id="@+id/test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="364dp"
         android:gravity="center_horizontal"
+        android:onClick="test"
         android:text="Test"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
