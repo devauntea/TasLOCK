@@ -19,6 +19,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:text="Tasks"
+
             android:textColor="#2b2d42"
             android:textSize="45dp" />
 
