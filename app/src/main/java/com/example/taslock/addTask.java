@@ -76,9 +76,6 @@ public class addTask extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         }
     }
-    public void add(View view) {
-        Intent intent = new Intent(this, Tasks.class);
-        startActivity(intent);
-    }
+
 
 }
