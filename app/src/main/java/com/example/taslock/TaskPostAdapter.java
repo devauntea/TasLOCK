@@ -14,10 +14,10 @@ public class TaskPostAdapter extends ArrayList<taskedPosts> {
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = LayoutInflater.from(getContext()).inflate(R.layout.forum_list_item, parent, false);
-        forumPosts chatMessage = getItem(position);
-        TextView messageTextView = convertView.findViewById(R.id.messageTextView);
-        messageTextView.setText(chatMessage.getPostMsg());
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.tasked_list_iteam, parent, false);
+        taskedPosts chatMessage = getItem(position);
+        TextView topicTextView = convertView.findViewById(R.id.topicTextView);
+        topicTextView.setText(chatMessage.getPostMsg());
         TextView usernameTextView = convertView.findViewById(R.id.usernameTextView);
         usernameTextView.setText(chatMessage.getTitle());
         //Use a cool circular ImageView for the profile pic. This comes from the library dependecy you imported.

@@ -19,12 +19,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Tasks extends AppCompatActivity {
-    atabaseReference databasePosts;
+    DatabaseReference databasePosts;
     //FirebaseAuth firebaseAuth;
     //FirebaseAuth.AuthStateListener authStateListener;
     ChildEventListener PostsEventListener;
     TaskPostAdapter ForumPostsAdapter;
     ArrayList<taskedPosts> Posts = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
