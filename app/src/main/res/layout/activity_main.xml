@@ -128,4 +128,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Test"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="335dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
