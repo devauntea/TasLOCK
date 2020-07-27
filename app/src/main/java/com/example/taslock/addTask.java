@@ -50,6 +50,23 @@ public class addTask extends AppCompatActivity {
 //        });
 
     }
+
+    public void task(View view){
+        String title = TitleView.getText().toString();
+        TitleView.setText("");
+        String time = TimeView.getText().toString();
+        TimeView.setText("");
+        String post = StartView.getText().toString();
+        StartView.setText("");
+        Intent intent = new Intent( addTask.this, Tasks.class);
+        startActivity(intent);
+
+        taskedPosts postMessage  = new taskedPosts(title,time,post);
+        databasePosts.push().setValue(postMessage);
+        closeKeyboard();
+        clicked = false;
+    }
+
     public void closeKeyboard(){
         View view = this.getCurrentFocus();
         if (view != null){

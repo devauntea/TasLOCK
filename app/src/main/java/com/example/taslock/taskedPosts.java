@@ -6,7 +6,7 @@ public class taskedPosts {
     int Time; //the text of the message being sent
     int start;
 
-    public taskedPosts() {
+    public taskedPosts(String title, String time, String post) {
 
     }
 
