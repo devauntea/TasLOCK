@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "31009833112",
+    "firebase_url": "https://taslock-4392d.firebaseio.com",
+    "project_id": "taslock-4392d",
+    "storage_bucket": "taslock-4392d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31009833112:android:810ac80ccb2109701010ed",
+        "android_client_info": {
+          "package_name": "com.example.taslock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31009833112-95dncc1pp1vonubuehdthilgq4kcc58j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taslock",
+            "certificate_hash": "2d8e8a64417737ede4e9bdf42ccf20530a8bb98a"
+          }
+        },
+        {
+          "client_id": "31009833112-cucu9jv81kkv1ifmpg2297l8qhs37os8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUtSSZ3OgMCVauzngcnI6UTAR44qo21H0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31009833112-cucu9jv81kkv1ifmpg2297l8qhs37os8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
