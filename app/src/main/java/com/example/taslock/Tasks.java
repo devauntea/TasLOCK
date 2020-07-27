@@ -33,9 +33,37 @@ public class Tasks extends AppCompatActivity {
         ListView tasksView = findViewById(R.id.tasked_view);
 
         TaskPostsAdapter = new TaskPostAdapter(this, Posts);
-        tasksView.setAdapter(TaskPostAdapter);
+        tasksView.setAdapter(TaskPostsAdapter);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databaseTasks = database.getReference().child("Posts");
+
+        databaseTasks.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                Posts.add(dataSnapshot.getValue(taskedPosts.class));
+                TaskPostsAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

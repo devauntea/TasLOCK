@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteY="47dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/startTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -24,7 +24,7 @@
         tools:layout_editor_absoluteY="66dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/eventTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -60,7 +60,7 @@
         tools:layout_editor_absoluteY="341dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/eventTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
