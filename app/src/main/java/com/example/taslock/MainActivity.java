@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
     };*/
     public void test(View view) {
         Intent intent = new Intent(this, tasksFack.class);
+        startActivity(intent);
+    }
+    public void testS(View view) {
+        Intent intent = new Intent(this, Survey.class);
         startActivity(intent);
     }
 }
