@@ -52,7 +52,9 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Question 2" />
+            android:text="What time to you stop working?
+"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/editText2"
