@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "31009833112",
-    "firebase_url": "https://taslock-4392d.firebaseio.com",
-    "project_id": "taslock-4392d",
-    "storage_bucket": "taslock-4392d.appspot.com"
+    "project_number": "598895893521",
+    "firebase_url": "https://taslock-bdd48.firebaseio.com",
+    "project_id": "taslock-bdd48",
+    "storage_bucket": "taslock-bdd48.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:31009833112:android:810ac80ccb2109701010ed",
+        "mobilesdk_app_id": "1:598895893521:android:de2ea7ac9b10d2d4ef65b0",
         "android_client_info": {
           "package_name": "com.example.taslock"
         }
       },
       "oauth_client": [
         {
-          "client_id": "31009833112-95dncc1pp1vonubuehdthilgq4kcc58j.apps.googleusercontent.com",
+          "client_id": "598895893521-luch84ksqubftn84hqovpvgf7tcu1but.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.taslock",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "31009833112-cucu9jv81kkv1ifmpg2297l8qhs37os8.apps.googleusercontent.com",
+          "client_id": "598895893521-anmbb0t287q847ch2eqs2c3cb5bpm4k8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAUtSSZ3OgMCVauzngcnI6UTAR44qo21H0"
+          "current_key": "AIzaSyDtBM0aPlk4GX630u5kcNO3l_e9bhd_LDA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "31009833112-cucu9jv81kkv1ifmpg2297l8qhs37os8.apps.googleusercontent.com",
+              "client_id": "598895893521-anmbb0t287q847ch2eqs2c3cb5bpm4k8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
