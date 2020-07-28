@@ -11,7 +11,6 @@ import com.airbnb.lottie.LottieAnimationView;
 public class tasksFack extends AppCompatActivity {
 
     boolean clicked = false;
-    boolean clickedChat = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
