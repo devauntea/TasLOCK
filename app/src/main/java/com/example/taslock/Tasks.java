@@ -21,6 +21,7 @@ public class Tasks extends AppCompatActivity {
     DatabaseReference databaseTasks;
     //FirebaseAuth firebaseAuth;
     //FirebaseAuth.AuthStateListener authStateListener;
+
     ChildEventListener PostsEventListener;
     TaskPostAdapter TaskPostsAdapter;
     ArrayList<taskedPosts> Posts = new ArrayList<>();
