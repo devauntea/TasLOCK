@@ -53,8 +53,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-<!--        app:srcCompat="@drawable/tasLOCK" -->
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="testS"
+        app:srcCompat="@drawable/taslock"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -136,9 +138,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="335dp"
+        android:layout_marginBottom="369dp"
         android:gravity="center_horizontal"
+        android:onClick="test"
         android:text="Test"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
