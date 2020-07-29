@@ -4,6 +4,7 @@ public class taskedPosts {
     String Title;
     String Time;
     String Teacher;
+    //String Subject;
 
    public taskedPosts() {
 
@@ -13,7 +14,7 @@ public class taskedPosts {
         this.Title = Title;
         this.Time = Time;
         this.Teacher = Teacher;
-        //this.start = start;
+        //this.Subject = Subject;
     }
 
     public String getTitle() {
@@ -34,7 +35,6 @@ public class taskedPosts {
     public String getTime(){ return Time; }
     public void setTime(String Time) { this.Time = Time; }
 
-    //public int getStart() { return start;}
-
-    //public void setStart(int start) { this.start = start; }
+    //public int getSubject() { return Subject;}
+    //public void setSubject(String Subject) { this.Subject = Subject; }
 }
