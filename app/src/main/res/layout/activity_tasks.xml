@@ -21,11 +21,13 @@
             android:text="Tasks"
 
             android:textColor="#2b2d42"
-            android:textSize="45dp" />
+            android:textSize="45dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="133dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="2"
             android:gravity="right"
             android:text="edit"
