@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TasLOCK</string>
 
-    <string name="taslock">TasLOCK</string>
-    <string name="all_of_your">All of your Scholarly Tasks Simplified.</string>
+    <string name="taslock">TaskIT</string>
+    <string name="all_of_your">All of your Tasks in one place.</string>
 
 </resources>

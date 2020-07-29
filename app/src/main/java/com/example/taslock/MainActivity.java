@@ -33,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DatabaseReference mDatabase;
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("messages").setValue("Hello, World");
-
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -53,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 //                    onSignedIn(user.getDisplayName(), user.getPhotoUrl());
                 } else {
                     //user is signed out
-//
                 }
             }
         };
