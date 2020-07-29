@@ -16,25 +16,22 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignUp extends AppCompatActivity {
-    EditText name, pass, email;
-    Button signupBtn;
+public class LognPage extends AppCompatActivity {
+    EditText pass, email;
+    Button signinBtn;
     FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_logn_page);
 
-        name = findViewById(R.id.NameView);
-        pass = findViewById(R.id.PassView);
-        email = findViewById(R.id.EmailView);
-        signupBtn = findViewById(R.id.btnview);
+        pass = findViewById(R.id.Pass2View);
+        email = findViewById(R.id.Email2View);
+        signinBtn = findViewById(R.id.signview);
         fAuth = FirebaseAuth.getInstance();
 
-
-
-        signupBtn.setOnClickListener(new View.OnClickListener() {
+        signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String mpass = pass.getText().toString().trim();
@@ -49,20 +46,18 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                fAuth.createUserWithEmailAndPassword(memail,mpass)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.signInWithEmailAndPassword(memail,mpass) .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(SignUp.this, "User Created.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(SignUp.this, Survey.class));
+                            Toast.makeText(LognPage.this, "Successful Sign In.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LognPage.this, Tasks.class));
                         } else {
-                            Toast.makeText(SignUp.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LognPage.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
         });
     }
-
 }
