@@ -38,9 +38,8 @@ public class addTask extends AppCompatActivity {
         setContentView(R.layout.activity_add_task);
         Timer = findViewById(R.id.Timer);
         TitleView = findViewById(R.id.eventTitle);
-        TimeView = findViewById(R.id.eventTime);
         TeacherView = findViewById(R.id.teacher);
-        SubjectView = findViewById(R.id.subTextView);
+        SubjectView = findViewById(R.id.subView);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databasePosts = database.getReference().child("Posts");
 
@@ -104,13 +103,13 @@ public class addTask extends AppCompatActivity {
     public void task(View view){
         String title = TitleView.getText().toString();
         TitleView.setText("");
-        String time = TimeView.getText().toString();
-        TimeView.setText("");
+        String time = Timer.getText().toString();
+        Timer.setText("");
         String teacher = TeacherView.getText().toString();
         TeacherView.setText("");
         String subject = SubjectView.getText().toString();
         SubjectView.setText("");
-        taskedPosts postMessage  = new taskedPosts(title,time,teacher);
+        taskedPosts postMessage = new taskedPosts(title,time,teacher,subject);
         databasePosts.push().setValue(postMessage);
 
         Intent intent = new Intent( addTask.this, Tasks.class);

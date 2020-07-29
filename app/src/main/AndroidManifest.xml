@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SignUp"></activity>
         <activity android:name=".Survey"/>
+        <activity android:name=".tasksFack"/>
         <activity android:name=".addTask" />
         <activity
             android:name=".Tasks"
