@@ -61,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void test(View view) {
+    /*public void test(View view) {
         Intent intent = new Intent(this, Tasks.class);
         startActivity(intent);
     }
     public void tests(View view) {
         Intent intent = new Intent(this, tasksFack.class);
         startActivity(intent);
-    }
+    }*/
     public void goSignUp(View view){
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);

@@ -54,7 +54,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="tests"
         app:srcCompat="@drawable/taslock"
         />
 
@@ -129,21 +128,6 @@
         android:layout_marginBottom="115dp"
         android:text="Sign In"
         android:textColor="#0366FB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="335dp"
-        android:layout_marginBottom="369dp"
-        android:gravity="center_horizontal"
-        android:onClick="test"
-        android:text="Test"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

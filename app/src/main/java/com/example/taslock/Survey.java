@@ -22,7 +22,6 @@ public class Survey extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (clicked = true){
-                    lottieClickedSub.playAnimation();
                     Intent intent = new Intent( Survey.this, tasksFack.class);
                     startActivity(intent);
                     clicked = true;
