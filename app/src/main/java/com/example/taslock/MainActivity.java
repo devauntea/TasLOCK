@@ -42,15 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //                    onSignedIn(user.getDisplayName(), user.getPhotoUrl());
                 } else {
                     //user is signed out
-//                    onSignedOut();
-                    startActivityForResult(
-                            AuthUI.getInstance()
-                                    .createSignInIntentBuilder()
-                                    .setIsSmartLockEnabled(false)
-                                    .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.EmailBuilder().build()))
-                                    .build(),
-                            RC_SIGN_IN);
+//
                 }
             }
         };
@@ -58,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void test(View view) {
-        Intent intent = new Intent(this, tasksFack.class);
+        Intent intent = new Intent(this, Tasks.class);
         startActivity(intent);
     }
 
