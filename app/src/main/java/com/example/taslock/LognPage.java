@@ -30,7 +30,7 @@ public class LognPage extends AppCompatActivity {
         email = findViewById(R.id.Email2View);
         signinBtn = findViewById(R.id.signview);
         fAuth = FirebaseAuth.getInstance();
-
+//
         signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
