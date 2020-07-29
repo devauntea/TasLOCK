@@ -59,12 +59,13 @@ public class addTask extends AppCompatActivity {
         TimeView.setText("");
         String teacher = TeacherView.getText().toString();
         TeacherView.setText("");
+        taskedPosts postMessage  = new taskedPosts(title,time,teacher);
+        databasePosts.setValue(postMessage);
 
         Intent intent = new Intent( addTask.this, Tasks.class);
         startActivity(intent);
 
-        taskedPosts postMessage  = new taskedPosts(title,time,teacher);
-        databasePosts.push().setValue(postMessage);
+
         closeKeyboard();
         clicked = false;
     }
