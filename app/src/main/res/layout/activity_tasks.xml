@@ -69,11 +69,11 @@
 
     </LinearLayout>
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/imageView3"
         android:layout_width="70dp"
         android:layout_height="69dp"
         android:layout_gravity="right"
-        app:srcCompat="@drawable/cal" />
+        app:srcCompat="@drawable/cal" />-->
 
 </LinearLayout>

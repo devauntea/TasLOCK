@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="What time do you start working?"
-            android:textSize="28sp" />
+            android:textSize="22dp" />
 
         <EditText
             android:id="@+id/editText"
@@ -55,9 +55,8 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What time to you stop working?
-"
-            android:textSize="30sp" />
+            android:text="What time to you stop working?"
+            android:textSize="22dp" />
 
         <EditText
             android:id="@+id/editText2"
@@ -71,9 +70,8 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How long do you spend on homework?
-"
-            android:textSize="30sp" />
+            android:text="How long do you spend on homework?"
+            android:textSize="22dp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -88,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="What is your worse subject? "
-            android:textSize="24sp" />
+            android:textSize="22dp" />
 
         <CheckBox
             android:id="@+id/checkBox"
