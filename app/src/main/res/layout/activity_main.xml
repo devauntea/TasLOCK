@@ -25,6 +25,8 @@
         tools:layout_conversion_absoluteHeight="86dp"
         tools:layout_conversion_absoluteWidth="267dp" />
 
+
+
     <TextView
         android:id="@+id/all_of_your"
         android:layout_width="match_parent"

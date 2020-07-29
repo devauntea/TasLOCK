@@ -40,7 +40,7 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What Time Do you Start Working?"
+            android:text="What time do you start working?"
             android:textSize="28sp" />
 
         <EditText
@@ -48,8 +48,8 @@
             android:layout_width="159dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="12:00 am" />
+            android:hint="12:00 am"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView11"
@@ -64,8 +64,8 @@
             android:layout_width="163dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="12:00 am" />
+            android:hint="12:00 am"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView12"
@@ -80,8 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="1 hour" />
+            android:hint="1 hour"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView13"

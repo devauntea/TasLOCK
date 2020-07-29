@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,9 +35,10 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:background="#4B858585"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Full Name" />
+            android:hint="Full Name"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/PassView"
@@ -44,9 +46,10 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:background="#4B858585"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Password" />
+            android:hint="Password"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/EmailView"
@@ -54,9 +57,11 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:background="#4B858585"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Email" />
+            android:hint="Email"
+            android:inputType="textPersonName" />
+
 
         <Button
             android:id="@+id/btnview"
@@ -65,7 +70,11 @@
             android:layout_gravity="bottom|center"
             android:layout_marginTop="100dp"
             android:foregroundGravity="bottom"
-            android:text="Make your Free Account!" />
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            android:text="Make your Free Account!"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
