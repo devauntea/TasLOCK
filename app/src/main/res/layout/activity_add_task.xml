@@ -125,8 +125,8 @@
 
     <EditText
         android:id="@+id/eventTitle"
-        android:layout_width="206dp"
-        android:layout_height="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="10dp"

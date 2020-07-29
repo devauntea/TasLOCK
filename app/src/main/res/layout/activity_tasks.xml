@@ -35,12 +35,20 @@
             android:textColor="#2b2d42"
             android:textSize="25dp" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/imageView2"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:onClick="creat"
-            android:src="@drawable/add" />
+            android:src="@drawable/add" />-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAddCreate"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/plus" />
 
 
     </LinearLayout>
@@ -77,16 +85,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="bottom"
+            android:gravity="center"
             android:onClick="signout"
             android:text="Sign Out"
             app:backgroundTint="#023e8a" />
 
-        <Space
+        <!--<Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="70dp"
+            android:layout_height="69dp"
+            android:layout_gravity="bottom|right"
+            app:srcCompat="@drawable/cal" />-->
     </LinearLayout>
 
 </LinearLayout>
