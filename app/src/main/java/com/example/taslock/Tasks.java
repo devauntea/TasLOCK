@@ -2,6 +2,7 @@ package com.example.taslock;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
@@ -42,7 +43,8 @@ public class Tasks extends AppCompatActivity {
         databaseTasks.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                Posts.add(dataSnapshot.getValue(taskedPosts.class));
+                taskedPosts task = dataSnapshot.getValue(taskedPosts.class);
+                Posts.add(task);
                 TaskPostsAdapter.notifyDataSetChanged();
             }
 

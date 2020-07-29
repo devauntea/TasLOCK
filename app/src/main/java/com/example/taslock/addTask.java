@@ -60,7 +60,7 @@ public class addTask extends AppCompatActivity {
         String teacher = TeacherView.getText().toString();
         TeacherView.setText("");
         taskedPosts postMessage  = new taskedPosts(title,time,teacher);
-        databasePosts.setValue(postMessage);
+        databasePosts.push().setValue(postMessage);
 
         Intent intent = new Intent( addTask.this, Tasks.class);
         startActivity(intent);
