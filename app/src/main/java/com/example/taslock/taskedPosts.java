@@ -1,9 +1,9 @@
 package com.example.taslock;
 
 public class taskedPosts {
-    String Title, Time, Teacher; //username for the authenticated user
-   //the text of the message being sent
-    //int start;
+    String Title;
+    String Time;
+    String Teacher;
 
    public taskedPosts() {
 

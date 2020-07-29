@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="12:00 am" />
 
         <TextView
             android:id="@+id/textView11"
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="12:00 am" />
 
         <TextView
             android:id="@+id/textView12"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="1 hour" />
 
         <TextView
             android:id="@+id/textView13"
