@@ -22,13 +22,13 @@ public class TaskPostAdapter extends ArrayAdapter<taskedPosts> {
         topicTextView.setText(taskmessage.getTitle());
 
         TextView timeTextView = convertView.findViewById(R.id.timeTextView);
-        timeTextView.setText(taskmessage.getTime());
+        timeTextView.setText("At" + taskmessage.getTime());
 
         TextView teacherTextView = convertView.findViewById(R.id.teacherTextView);
-        teacherTextView.setText(taskmessage.getTeacher());
+        teacherTextView.setText("Teacher:" + taskmessage.getTeacher());
 
         TextView SubTextView = convertView.findViewById(R.id.subTextView);
-        SubTextView.setText(taskmessage.getSubject());
+        SubTextView.setText("Subject:" + taskmessage.getSubject());
 
         return convertView;
     }
