@@ -38,6 +38,18 @@
                 android:layout_marginTop="10dp"/>
 
                 <TextView
+                    android:id="@+id/subTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="2"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="20dp" />
+
+                <TextView
                     android:id="@+id/timeTextView"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
@@ -61,6 +73,8 @@
                     android:layout_weight="2"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20dp" />
+
+
 
             </LinearLayout>
 

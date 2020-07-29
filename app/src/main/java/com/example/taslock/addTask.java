@@ -25,6 +25,7 @@ public class addTask extends AppCompatActivity {
     EditText TitleView;
     EditText TimeView;
     EditText TeacherView;
+    TextView SubjectView;
     DatabaseReference databasePosts;
     boolean clicked = false;
 
@@ -39,6 +40,7 @@ public class addTask extends AppCompatActivity {
         TitleView = findViewById(R.id.eventTitle);
         TimeView = findViewById(R.id.eventTime);
         TeacherView = findViewById(R.id.teacher);
+        SubjectView = findViewById(R.id.subTextView);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databasePosts = database.getReference().child("Posts");
 
@@ -106,6 +108,8 @@ public class addTask extends AppCompatActivity {
         TimeView.setText("");
         String teacher = TeacherView.getText().toString();
         TeacherView.setText("");
+        String subject = SubjectView.getText().toString();
+        SubjectView.setText("");
         taskedPosts postMessage  = new taskedPosts(title,time,teacher);
         databasePosts.push().setValue(postMessage);
 

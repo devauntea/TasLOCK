@@ -4,17 +4,17 @@ public class taskedPosts {
     String Title;
     String Time;
     String Teacher;
-    //String Subject;
+    String Subject;
 
    public taskedPosts() {
 
    }
 
-    public taskedPosts(String Title, String Time, String Teacher) {
+    public taskedPosts(String Title, String Time, String Teacher, String Subject) {
         this.Title = Title;
         this.Time = Time;
         this.Teacher = Teacher;
-        //this.Subject = Subject;
+        this.Subject = Subject;
     }
 
     public String getTitle() {
@@ -35,6 +35,6 @@ public class taskedPosts {
     public String getTime(){ return Time; }
     public void setTime(String Time) { this.Time = Time; }
 
-    //public int getSubject() { return Subject;}
-    //public void setSubject(String Subject) { this.Subject = Subject; }
+    public String getSubject() { return Subject;}
+    public void setSubject(String Subject) { this.Subject = Subject; }
 }
