@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 
 public class Tasks extends AppCompatActivity {
     DatabaseReference databaseTasks;
+    boolean clicked = false;
     //FirebaseAuth firebaseAuth;
     //FirebaseAuth.AuthStateListener authStateListener;
 
@@ -35,6 +37,18 @@ public class Tasks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
         ListView tasksView = findViewById(R.id.tasked_view);
+
+        final LottieAnimationView lottieClickedSub = findViewById(R.id.lottieAddCreate);
+        lottieClickedSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clicked = true){
+                    Intent intent = new Intent( Tasks.this, addTask.class);
+                    startActivity(intent);
+                    clicked = true;
+                }
+            }
+        });
 
         TaskPostsAdapter = new TaskPostAdapter(this, Posts);
         tasksView.setAdapter(TaskPostsAdapter);
