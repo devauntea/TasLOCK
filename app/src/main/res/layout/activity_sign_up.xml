@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SignUp">
 
-
+    
 
     <TextView
         android:id="@+id/textView12"
@@ -31,49 +31,41 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:layout_editor_absoluteX="0dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/NameView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:gravity="center"
-            android:hint="Full Name">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="343dp"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--<EditText
-            android:id="@+id/NameView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="264dp"
+            android:layout_height="47dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#4B858585"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:ems="10"
             android:hint="Full Name"
-            android:inputType="textPersonName" />-->
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/PassView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="264dp"
+            android:layout_height="47dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#4B858585"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/EmailView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="264dp"
+            android:layout_height="47dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#4B858585"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:ems="10"
             android:hint="Email"
             android:inputType="textPersonName" />
