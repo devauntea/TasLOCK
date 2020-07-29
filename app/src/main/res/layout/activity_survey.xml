@@ -45,7 +45,7 @@
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="159dp"
+            android:layout_width="163dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="12:00 am"
@@ -75,7 +75,7 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="match_parent"
+            android:layout_width="163dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="1 hour"
