@@ -27,6 +27,7 @@ public class Tasks extends AppCompatActivity {
     ArrayList<taskedPosts> Posts = new ArrayList<>();
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
