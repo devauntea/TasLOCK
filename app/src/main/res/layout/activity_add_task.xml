@@ -196,6 +196,7 @@
         android:layout_marginRight="173dp"
         android:onClick="task"
         android:text="Next"
+        app:backgroundTint="#023e8a"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
