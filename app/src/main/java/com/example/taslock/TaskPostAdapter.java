@@ -28,7 +28,7 @@ public class TaskPostAdapter extends ArrayAdapter<taskedPosts> {
         teacherTextView.setText(taskmessage.getTeacher());
 
         TextView SubTextView = convertView.findViewById(R.id.subTextView);
-        SubTextView.setText(taskmessage.getTeacher());
+        SubTextView.setText(taskmessage.getSubject());
 
         return convertView;
     }
