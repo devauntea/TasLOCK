@@ -1,16 +1,15 @@
 package com.example.taslock;
 
 public class taskedPosts {
-    String Title; //username for the authenticated user
-    String Teacher;
-    int Time; //the text of the message being sent
+    String Title, Time, Teacher; //username for the authenticated user
+   //the text of the message being sent
     //int start;
 
-    public taskedPosts(String title, String time, String Teacher) {
+   public taskedPosts() {
 
-    }
+   }
 
-    public taskedPosts(String Title, int Time, String Teacher) {
+    public taskedPosts(String Title, String Time, String Teacher) {
         this.Title = Title;
         this.Time = Time;
         this.Teacher = Teacher;
@@ -20,7 +19,6 @@ public class taskedPosts {
     public String getTitle() {
         return Title;
     }
-
     public void setTitle(String Title) {
         this.Title = Title;
     }
@@ -29,18 +27,12 @@ public class taskedPosts {
     public String getTeacher() {
         return Teacher;
     }
-
-    public void setTeacher(String Title) {
+    public void setTeacher(String Teacher) {
         this.Teacher = Teacher;
     }
 
-    /*public int getPostMsg() {
-        return Time;
-    }
-
-    public void setPostMsg(int PostMsg) {
-        this.Time = Time;
-    }*/
+    public String getTime(){ return Time; }
+    public void setTime(String Time) { this.Time = Time; }
 
     //public int getStart() { return start;}
 
