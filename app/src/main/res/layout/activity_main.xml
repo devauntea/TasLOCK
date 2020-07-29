@@ -70,6 +70,7 @@
         android:layout_marginBottom="325dp"
         android:background="@drawable/btn"
         android:gravity="center"
+        android:onClick="goSignUp"
         android:text="SIgn Up For Free!"
         android:textColor="#2b2d42"
         app:layout_constraintBottom_toBottomOf="parent"

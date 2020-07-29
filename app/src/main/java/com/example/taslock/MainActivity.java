@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
     }
 
 
@@ -66,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void testS(View view) {
         Intent intent = new Intent(this, tasksFack.class);
+        startActivity(intent);
+    }
+    public void goSignUp(View view){
+        Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
 
