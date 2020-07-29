@@ -10,7 +10,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -24,6 +28,7 @@ import java.util.Date;
 
 public class addTask extends AppCompatActivity {
 //    private Spinner spinner;
+//    LinearLayout BoarderView;
     EditText TitleView;
     EditText TimeView;
     EditText TeacherView;
@@ -42,10 +47,17 @@ public class addTask extends AppCompatActivity {
         TitleView = findViewById(R.id.eventTitle);
         TeacherView = findViewById(R.id.teacher);
         SubjectView = findViewById(R.id.subView);
+//        BoarderView = findViewById(R.id.boarder);
 //        spinner = findViewById(R.id.spinner);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databasePosts = database.getReference().child("Posts");
 
+//        spinner.setOnItemSelectedListener(this);
+//
+//        String[] color = getResources().getStringArray(R.array.colors);
+//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, color);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
 
         Timer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +115,18 @@ public class addTask extends AppCompatActivity {
 //        });
 
     }
+    /*@Override
+    public void onItemSelected(AdapterView<?> parent,View view, int position, long id ){
+        if (parent.getId() == R.id.spinner){
+            String valueFromString = parent.getItemAtPosition(position).toString();
+
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent ){
+
+    }*/
 
     public void task(View view){
         String title = TitleView.getText().toString();

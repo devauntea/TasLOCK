@@ -16,6 +16,7 @@
             android:layout_weight="0"
             android:orientation="horizontal"
             android:background="@drawable/btn"
+            android:id="@+id/boarder"
             >
 
             <LinearLayout
