@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -22,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class addTask extends AppCompatActivity {
+//    private Spinner spinner;
     EditText TitleView;
     EditText TimeView;
     EditText TeacherView;
@@ -40,8 +42,10 @@ public class addTask extends AppCompatActivity {
         TitleView = findViewById(R.id.eventTitle);
         TeacherView = findViewById(R.id.teacher);
         SubjectView = findViewById(R.id.subView);
+//        spinner = findViewById(R.id.spinner);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databasePosts = database.getReference().child("Posts");
+
 
         Timer.setOnClickListener(new View.OnClickListener() {
             @Override
