@@ -35,6 +35,7 @@ public class Survey extends AppCompatActivity {
         Time2 = findViewById(R.id.Time2);
 
 
+
         final LottieAnimationView lottieClickedSub = findViewById(R.id.lottieSub);
         lottieClickedSub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,5 +116,6 @@ public class Survey extends AppCompatActivity {
                 timePickerDialog.show();
             }
         });
+
     }
 }
