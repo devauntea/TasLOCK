@@ -8,16 +8,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <LinearLayout
+            android:id="@+id/boarder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="0"
-            android:orientation="horizontal"
             android:background="@drawable/btn"
-            android:id="@+id/boarder"
-            >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
