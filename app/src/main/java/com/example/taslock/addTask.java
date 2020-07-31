@@ -19,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -35,7 +37,9 @@ public class addTask extends AppCompatActivity {
     TextView SubjectView;
     DatabaseReference databasePosts;
     boolean clicked = false;
-
+    FirebaseAuth fAuth;
+    String userid;
+    FirebaseUser user;
     TextView Timer;
     int t1hour, t1minute;
 
@@ -49,8 +53,15 @@ public class addTask extends AppCompatActivity {
         SubjectView = findViewById(R.id.subView);
 //        BoarderView = findViewById(R.id.boarder);
 //        spinner = findViewById(R.id.spinner);
+        fAuth = FirebaseAuth.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        databasePosts = database.getReference().child("Posts");
+        userid = user.getUid();
+
+        databasePosts = database.getReference().child(userid);
+
+
+
 
 //        spinner.setOnItemSelectedListener(this);
 //

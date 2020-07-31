@@ -35,40 +35,43 @@
             android:id="@+id/NameView"
             android:layout_width="264dp"
             android:layout_height="47dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#4B858585"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:ems="10"
+            android:gravity="center"
             android:hint="Full Name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Test" />
 
         <EditText
             android:id="@+id/PassView"
             android:layout_width="264dp"
             android:layout_height="47dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#4B858585"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:ems="10"
+            android:gravity="center"
             android:hint="Password"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Test123" />
 
         <EditText
             android:id="@+id/EmailView"
             android:layout_width="264dp"
             android:layout_height="47dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="#4B858585"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:ems="10"
+            android:gravity="center"
             android:hint="Email"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Test123@gmail.com" />
 
 
         <TextView

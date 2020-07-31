@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,6 +26,10 @@ public class Tasks extends AppCompatActivity {
     boolean clicked = false;
     //FirebaseAuth firebaseAuth;
     //FirebaseAuth.AuthStateListener authStateListener;
+
+
+    String userid;
+    FirebaseUser user;
 
     ChildEventListener PostsEventListener;
     TaskPostAdapter TaskPostsAdapter;
@@ -52,9 +57,11 @@ public class Tasks extends AppCompatActivity {
 
         TaskPostsAdapter = new TaskPostAdapter(this, Posts);
         tasksView.setAdapter(TaskPostsAdapter);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        userid = user.getUid();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        databaseTasks = database.getReference().child("Posts");
+        databaseTasks = database.getReference().child(userid);
 
         databaseTasks.addChildEventListener(new ChildEventListener() {
             @Override
