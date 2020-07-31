@@ -10,7 +10,8 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:textColor="#000000"
+        android:text="Login"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,18 +56,19 @@
             android:inputType="textPersonName" />
 
 
-        <Button
+        <TextView
             android:id="@+id/signview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
             android:layout_gravity="bottom|center"
             android:layout_marginTop="100dp"
-            android:foregroundGravity="bottom"
+            android:background="@drawable/btnc2"
+            android:gravity="center"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
             android:text="Sign In"
-            android:textSize="20sp"
-            app:backgroundTint="#E4023E8A" />
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

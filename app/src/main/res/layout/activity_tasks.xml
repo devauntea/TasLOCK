@@ -80,15 +80,18 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:id="@+id/signout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:background="@drawable/btnc2"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:onClick="signout"
             android:text="Sign Out"
-            app:backgroundTint="#023e8a" />
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            />
 
         <!--<Space
             android:layout_width="wrap_content"
