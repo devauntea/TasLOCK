@@ -26,12 +26,11 @@
         tools:layout_conversion_absoluteWidth="267dp" />
 
 
-
     <TextView
         android:id="@+id/all_of_your"
         android:layout_width="match_parent"
         android:layout_height="22dp"
-        android:layout_marginTop="138dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="571dp"
         android:fontFamily="monospace"
         android:gravity="center_horizontal|top"
@@ -40,24 +39,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/taslock" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="168dp"
         android:layout_height="136dp"
-        android:layout_marginStart="122dp"
-        android:layout_marginLeft="122dp"
-        android:layout_marginTop="186dp"
-        android:layout_marginEnd="122dp"
-        android:layout_marginRight="122dp"
-        android:layout_marginBottom="410dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginRight="123dp"
+        android:layout_marginBottom="396dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/taskit"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/all_of_your"
+        app:srcCompat="@drawable/it" />
 
     <TextView
         android:id="@+id/textView"
@@ -65,7 +63,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="140dp"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="141dp"
         android:layout_marginRight="141dp"
         android:layout_marginBottom="325dp"
@@ -78,8 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -87,7 +84,7 @@
         android:layout_height="34dp"
         android:layout_marginStart="112dp"
         android:layout_marginLeft="112dp"
-        android:layout_marginTop="449dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="113dp"
         android:layout_marginRight="113dp"
         android:layout_marginBottom="248dp"
@@ -98,7 +95,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView3"
@@ -106,7 +103,7 @@
         android:layout_height="21dp"
         android:layout_marginStart="53dp"
         android:layout_marginLeft="53dp"
-        android:layout_marginTop="597dp"
+        android:layout_marginTop="113dp"
         android:layout_marginEnd="186dp"
         android:layout_marginRight="186dp"
         android:layout_marginBottom="113dp"
@@ -115,14 +112,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="301dp"
-        android:layout_marginLeft="301dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
         android:layout_marginTop="597dp"
         android:layout_marginEnd="67dp"
         android:layout_marginRight="67dp"
@@ -132,7 +129,7 @@
         android:textColor="#0366FB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

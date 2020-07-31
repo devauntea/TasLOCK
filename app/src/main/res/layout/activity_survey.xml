@@ -101,7 +101,7 @@
             android:textColor="#000000"
             android:textSize="22dp" />
 
-        <TextView
+        <EditText
             android:id="@+id/Time3"
             android:layout_width="170dp"
             android:layout_height="45dp"
