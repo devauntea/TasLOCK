@@ -184,10 +184,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.074" />
 
-    <Button
+    <TextView
         android:id="@+id/next"
-        android:layout_width="91dp"
-        android:layout_height="43dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="172dp"
         android:layout_marginLeft="172dp"
         android:layout_marginTop="683dp"
@@ -195,7 +195,9 @@
         android:layout_marginRight="173dp"
         android:onClick="task"
         android:text="Next"
-        app:backgroundTint="#023e8a"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@drawable/btnc2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
