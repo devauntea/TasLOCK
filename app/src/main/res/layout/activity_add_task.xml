@@ -196,6 +196,7 @@
         android:onClick="task"
         android:text="Next"
         android:textSize="20dp"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:background="@drawable/btnc2"
         app:layout_constraintBottom_toBottomOf="parent"

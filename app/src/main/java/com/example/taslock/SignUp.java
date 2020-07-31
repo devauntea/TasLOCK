@@ -65,5 +65,13 @@ public class SignUp extends AppCompatActivity {
             }
         });
     }
+    public void signUp(View view){
+        String fullName = name.getText().toString();
+        name.setText("First n Last");
+        String Password = pass.getText().toString();
+        pass.setText("Password123");
+        String Email = email.getText().toString();
+        email.setText("Email@mail.org");
+    };
 
 }
