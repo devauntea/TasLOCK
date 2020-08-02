@@ -23,7 +23,7 @@ public class TaskPostAdapter extends ArrayAdapter<taskedPosts> {
         topicTextView.setText(taskmessage.getTitle());
 
         TextView timeTextView = convertView.findViewById(R.id.timeTextView);
-        timeTextView.setText("At " + taskmessage.getTime());
+        timeTextView.setText("Due by " + taskmessage.getTime());
 
         TextView teacherTextView = convertView.findViewById(R.id.teacherTextView);
         teacherTextView.setText("Teacher: " + taskmessage.getTeacher());

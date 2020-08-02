@@ -84,7 +84,7 @@
                     android:layout_weight="0"
                     android:gravity="bottom|end"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="22dp" />
 
                 <TextView
                     android:id="@+id/teacherTextView"
