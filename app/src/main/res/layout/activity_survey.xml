@@ -134,27 +134,34 @@
 
         <CheckBox
             android:id="@+id/checkBox"
-            android:layout_width="match_parent"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
-
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="Math" />
 
         <CheckBox
             android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="Science" />
 
         <CheckBox
             android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="English" />
 
         <CheckBox
             android:id="@+id/checkBox4"
-            android:layout_width="match_parent"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="Global" />
 
     </LinearLayout>
