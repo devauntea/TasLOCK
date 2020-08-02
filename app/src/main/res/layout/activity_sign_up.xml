@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".SignUp">
 
-    
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
         android:onClick="signUp"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +39,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#4B858585"
+            android:background="@drawable/edittext"
+            android:textColor="#ffffff"
+            android:textColorHint="#F5F5F5"
             android:ems="10"
             android:gravity="center"
             android:hint="Full Name"
@@ -50,37 +53,41 @@
             android:layout_width="264dp"
             android:layout_height="47dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:background="#4B858585"
+            android:background="@drawable/edittext"
             android:ems="10"
+            android:textColor="#ffffff"
+            android:textColorHint="#F5F5F5"
             android:gravity="center"
             android:hint="Password"
             android:inputType="textPersonName"
             android:text="Test123" />
+
 
         <EditText
             android:id="@+id/EmailView"
             android:layout_width="264dp"
             android:layout_height="47dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
-            android:background="#4B858585"
+            android:background="@drawable/edittext"
+            android:textColorHint="#F5F5F5"
             android:ems="10"
             android:gravity="center"
             android:hint="Email"
             android:inputType="textPersonName"
             android:text="Test123@gmail.com" />
 
-
         <TextView
             android:id="@+id/btnview"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:layout_gravity="bottom|center"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/btnc2"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button"
             android:textColor="#FFFFFF"
             android:gravity="center"
             android:paddingLeft="5sp"
