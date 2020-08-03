@@ -45,6 +45,7 @@ public class Survey extends AppCompatActivity {
                     startActivity(intent);
                     clicked = true;
                     String startTime = Time.getText().toString();
+
 //                    for
                 }
 
