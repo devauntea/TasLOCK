@@ -7,7 +7,7 @@
     tools:context=".infoTasks">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/TitleView"
         android:layout_width="178dp"
         android:layout_height="58dp"
         android:layout_marginStart="50dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/subject"
+        android:id="@+id/SubjectView"
         android:layout_width="119dp"
         android:layout_height="34dp"
         android:layout_marginStart="48dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/teacher"
+        android:id="@+id/TeacherView"
         android:layout_width="119dp"
         android:layout_height="34dp"
         android:layout_marginStart="48dp"

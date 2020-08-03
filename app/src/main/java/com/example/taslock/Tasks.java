@@ -48,9 +48,12 @@ public class Tasks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (clicked = true){
+
+
                     Intent intent = new Intent( Tasks.this, addTask.class);
                     startActivity(intent);
                     clicked = true;
+
                 }
             }
         });
@@ -91,5 +94,9 @@ public class Tasks extends AppCompatActivity {
     public void signout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(Tasks.this, MainActivity.class));
+    }
+    public void info(View view) {
+        Intent intent = new Intent(this, infoTasks.class);
+        startActivity(intent);
     }
 }
