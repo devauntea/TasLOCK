@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".infoTasks"></activity>
+        <activity android:name=".Plans"></activity>
+        <activity android:name=".infoTasks" />
         <activity android:name=".LognPage" />
         <activity android:name=".SignUp" />
         <activity android:name=".Survey" />
