@@ -96,6 +96,7 @@
         android:background="@drawable/btn2"
         android:gravity="center"
         android:text="Look at Our Paid Options"
+        android:onClick="plans"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
