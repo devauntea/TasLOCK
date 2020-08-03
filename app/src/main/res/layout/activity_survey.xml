@@ -8,27 +8,46 @@
     android:background="@drawable/survey"
     tools:context=".Survey">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="55dp"
-        android:text="Survey"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="74dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/it" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:text="Survey"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="609dp">
+        android:layout_height="609dp"
+        android:layout_marginTop="30dp"
+        >
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
@@ -142,8 +161,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
-                android:textSize="20dp"
-                android:text="Math" />
+                android:scrollbarStyle="insideInset"
+                android:scrollbarThumbHorizontal="@color/common_google_signin_btn_text_dark_focused"
+                android:text="Math"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
@@ -151,8 +173,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
-                android:textSize="19dp"
-                android:text="Science" />
+                android:text="Science"
+                android:textColor="#ffffff"
+                android:textColorHint="#FFFFFF"
+                android:textSize="19dp" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
@@ -161,6 +185,7 @@
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
                 android:textSize="20dp"
+                android:textColor="#ffffff"
                 android:text="English" />
 
             <CheckBox
@@ -170,6 +195,7 @@
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
                 android:textSize="20dp"
+                android:textColor="#ffffff"
                 android:text="Global" />
 
             <CheckBox
@@ -179,6 +205,7 @@
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
                 android:text="N/A"
+                android:textColor="#ffffff"
                 android:textSize="20dp" />
 
             <com.airbnb.lottie.LottieAnimationView
@@ -201,6 +228,8 @@
 
         </LinearLayout>
     </ScrollView>
+
+
 
 
 </LinearLayout>

@@ -11,7 +11,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
+        android:background="#8670FF"
         android:orientation="horizontal">
 
         <TextView
@@ -20,7 +21,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:text="Tasks"
-            android:textColor="#2b2d42"
+            android:textColor="#ffffff"
             android:textSize="45dp"
             />
 
@@ -32,7 +33,7 @@
             android:layout_weight="2"
             android:gravity="right"
             android:text="edit"
-            android:textColor="#2b2d42"
+            android:textColor="#ffffff"
             android:textSize="25dp" />
 
         <!--<ImageView
@@ -93,11 +94,11 @@
             android:layout_gravity="bottom|right"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/white"
+            android:background="@drawable/btnc2"
             android:gravity="center"
             android:onClick="signout"
             android:text="Sign Out"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:textSize="20sp" />
 
         <!--<Space

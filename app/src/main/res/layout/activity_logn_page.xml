@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.147" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
@@ -40,9 +41,9 @@
             android:background="@drawable/edittext"
             android:ems="10"
             android:gravity="center"
-            android:textColorHint="#F5F5F5"
             android:hint="Email"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="#F5F5F5" />
 
 
         <EditText
@@ -74,5 +75,21 @@
             android:textSize="20sp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="309dp"
+        android:layout_marginRight="309dp"
+        android:layout_marginBottom="145dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/it" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
