@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -70,8 +71,14 @@ public class Tasks extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 taskedPosts task = dataSnapshot.getValue(taskedPosts.class);
-                Posts.add(task);
-                TaskPostsAdapter.notifyDataSetChanged();
+                if (task.Subject != null ) {
+                    Posts.add(task);
+                    TaskPostsAdapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(Tasks.this, "Error: Task Unable to be Added", Toast.LENGTH_SHORT).show();
+
+                }
+
             }
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {

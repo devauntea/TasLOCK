@@ -1,5 +1,7 @@
 package com.example.taslock;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.TimePickerDialog;
@@ -21,9 +23,13 @@ import android.widget.TimePicker;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,6 +48,7 @@ public class addTask extends AppCompatActivity {
     FirebaseUser user;
     TextView Timer;
     int t1hour, t1minute;
+    FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,14 +96,14 @@ public class addTask extends AppCompatActivity {
                                 try {
                                     Date date = f24Hours.parse(time);
                                     SimpleDateFormat f12Hours = new SimpleDateFormat(
-                                            "hh:mm aa"
+                                            "hh:mm"
                                     );
                                     Timer.setText(f12Hours.format(date));
                                 } catch (ParseException e) {
                                     e.printStackTrace();
                                 }
                             }
-                        },12,0,false
+                        },12,0,true
                 );
                 timePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 timePickerDialog.updateTime(t1hour,t1minute);
@@ -140,16 +147,41 @@ public class addTask extends AppCompatActivity {
     }*/
 
     public void task(View view){
-        String title = TitleView.getText().toString();
-        TitleView.setText("");
-        String time = Timer.getText().toString();
-        Timer.setText("");
-        String teacher = TeacherView.getText().toString();
-        TeacherView.setText("");
-        String subject = SubjectView.getText().toString();
-        SubjectView.setText("");
-        taskedPosts postMessage = new taskedPosts(title,time,teacher,subject);
-        databasePosts.push().setValue(postMessage);
+
+        databasePosts.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                String title = TitleView.getText().toString();
+                TitleView.setText("");
+                String time = Timer.getText().toString();
+                final int timeInt = toMins(time);
+                Surveyposts sTime = dataSnapshot.getValue(Surveyposts.class);
+                int totalInt = (sTime.startTime + timeInt);
+                String gTime = toStringTime(totalInt);
+                Timer.setText("");
+                String teacher = TeacherView.getText().toString();
+                TeacherView.setText("");
+                String subject = SubjectView.getText().toString();
+                SubjectView.setText("");
+                taskedPosts postMessage = new taskedPosts(title,gTime,teacher,subject);
+                databasePosts.push().setValue(postMessage);
+
+
+            }
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+            }
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+            }
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+
+        });
 
         Intent intent = new Intent( addTask.this, Tasks.class);
         startActivity(intent);
@@ -166,6 +198,35 @@ public class addTask extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         }
     }
+    private static int toMins(String s) {
+        String[] hourMin = s.split(":");
+        int hour = Integer.parseInt(hourMin[0]);
+        int mins = Integer.parseInt(hourMin[1]);
+        int hoursInMins = hour * 60;
+        return hoursInMins + mins;
+    }
+    private static String toStringTime(int t) {
+        int hour = t / 60;
+        int min = t % 60;
 
+        return hour + ":" + min;
+    }
+    public String reverseFormat(String time){
+        DateFormat df = new SimpleDateFormat("H:m");
+        //Date/time pattern of desired output date
+        DateFormat outputformat = new SimpleDateFormat("hh:mm aa");
+        Date date = null;
+        String output = null;
+        try{
+            //Conversion of input String to date
+            date= df.parse(time);
+            //old date format to new date format
+            output = outputformat.format(date);
+        }catch(ParseException pe){
+            pe.printStackTrace();
+        }
+
+        return output;
+    }
 
 }
