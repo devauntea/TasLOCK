@@ -1,23 +1,28 @@
 package com.example.taslock;
 
 public class Surveyposts {
-    String startTime;
+    int startTime;
     String endTime;
 
+    public Surveyposts(){
 
-    public Surveyposts(String startTime, String endTime) {
+    }
+
+
+    public Surveyposts(int startTime, String endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
 
     }
 
-    public String getStartTime() {
+    public int getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(int startTime) {
         this.startTime = startTime;
     }
+
 
 
 }
