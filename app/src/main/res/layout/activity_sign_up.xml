@@ -56,13 +56,12 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edittext"
-            android:textColor="#ffffff"
-            android:textColorHint="#F5F5F5"
             android:ems="10"
             android:gravity="center"
             android:hint="Full Name"
             android:inputType="textPersonName"
-            android:text="Test" />
+            android:textColor="#ffffff"
+            android:textColorHint="#F5F5F5" />
 
         <EditText
             android:id="@+id/PassView"
@@ -73,12 +72,11 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/edittext"
             android:ems="10"
-            android:textColor="#ffffff"
-            android:textColorHint="#F5F5F5"
             android:gravity="center"
             android:hint="Password"
             android:inputType="textPersonName"
-            android:text="Test123" />
+            android:textColor="#ffffff"
+            android:textColorHint="#F5F5F5" />
 
 
         <EditText
@@ -86,16 +84,15 @@
             android:layout_width="264dp"
             android:layout_height="47dp"
             android:layout_gravity="center"
-            android:textColor="#ffffff"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edittext"
-            android:textColorHint="#F5F5F5"
             android:ems="10"
             android:gravity="center"
-            android:hint="Email"
+            android:hint="GMail"
             android:inputType="textPersonName"
-            android:text="Test123@gmail.com" />
+            android:textColor="#ffffff"
+            android:textColorHint="#F5F5F5" />
 
         <TextView
             android:id="@+id/btnview"
