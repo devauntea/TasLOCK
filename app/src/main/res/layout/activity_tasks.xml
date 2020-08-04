@@ -45,12 +45,12 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottieAddCreate"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="false"
-            app:lottie_rawRes="@raw/plus" />
+            app:lottie_rawRes="@raw/pluspur" />
 
 
     </LinearLayout>
@@ -94,7 +94,7 @@
             android:layout_gravity="bottom|right"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/btnc2"
+            android:background="@drawable/btn2"
             android:gravity="center"
             android:onClick="signout"
             android:text="Sign Out"
