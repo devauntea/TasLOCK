@@ -8,8 +8,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieEmpty"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="288dp"
+        android:layout_height="278dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="123dp"
@@ -36,7 +36,7 @@
         android:layout_marginBottom="298dp"
         android:text="NO TASKS"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +44,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="211dp"
-        android:layout_height="76dp"
+        android:layout_width="318dp"
+        android:layout_height="63dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="456dp"
@@ -55,7 +55,7 @@
         android:gravity="center"
         android:text="click the add button to create and save a task"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,20 +63,19 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAddTask"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="123dp"
+        android:layout_height="115dp"
         android:layout_marginStart="335dp"
         android:layout_marginLeft="335dp"
         android:layout_marginTop="655dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/addbtn2" />
+        app:lottie_rawRes="@raw/plus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
