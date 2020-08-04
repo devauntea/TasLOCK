@@ -90,7 +90,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:gravity="clip_vertical"
-                    android:text="– Survey"
+                    android:text="– User Survey That We Use To Learn More About Your Work Habits"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
@@ -102,7 +102,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:gravity="clip_vertical"
-                    android:text="– Suggestions on how to manage time better and to stay focused"
+                    android:text="– Suggestions on How to Manage Time Better and to Stay Focused"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
@@ -114,7 +114,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:gravity="clip_vertical"
-                    android:text="–Personal Schedule  Crafted to Accomodate your time and needs"
+                    android:text="–Personal Schedule  Crafted to Accomodate your Personal Time and Needs"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
@@ -127,7 +127,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="25dp"
                     android:gravity="clip_vertical"
-                    android:text="– Gives Suggestions on tools and resources to help on the task"
+                    android:text="– Gi Suggestions on Tools and Resources to Help on the Task"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
@@ -158,7 +158,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:gravity="clip_vertical"
-                    android:text="–Allows the Syncing of Schedule to Google Classroom and Calendar."
+                    android:text="– Syncing of Schedule to Google Classroom and Calendar"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
@@ -184,7 +184,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="25dp"
                     android:gravity="clip_vertical"
-                    android:text="$4.99/mo"
+                    android:text="$1.99/mo"
                     android:textColor="#000000"
                     android:textSize="28dp"
                     android:textStyle="bold" />
@@ -216,7 +216,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:gravity="clip_vertical"
-                    android:text="–Deluxe subscription plan that connects our app to users school/program. Comes with freemium,premium, and School Premium benefits. Subscription is bought by schools and programs, which allow the students/participants to get free access to benefits. "
+                    android:text="–Deluxe Subscription Plan that Connects our App to Users School/Program. Comes with Freemium, Premium, and School Premium Benefits That are Instantly Granted to all Students and Teacher Faculty"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
