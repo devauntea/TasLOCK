@@ -160,7 +160,7 @@ public class addTask extends AppCompatActivity {
                 String time = Timer.getText().toString();
                 String teacher = TeacherView.getText().toString();
                 String subject = SubjectView.getText().toString();
-
+//
                 if (Timer.getText().toString() != "" ) {
                     final int timeInt = toMins(time);
                     Surveyposts sTime = dataSnapshot.getValue(Surveyposts.class);
