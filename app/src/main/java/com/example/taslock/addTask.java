@@ -3,12 +3,17 @@ package com.example.taslock;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -152,19 +157,27 @@ public class addTask extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 String title = TitleView.getText().toString();
-                TitleView.setText("");
                 String time = Timer.getText().toString();
-                final int timeInt = toMins(time);
-                Surveyposts sTime = dataSnapshot.getValue(Surveyposts.class);
-                int totalInt = (sTime.startTime + timeInt);
-                String gTime = toStringTime(totalInt);
-                Timer.setText("");
                 String teacher = TeacherView.getText().toString();
-                TeacherView.setText("");
                 String subject = SubjectView.getText().toString();
-                SubjectView.setText("");
-                taskedPosts postMessage = new taskedPosts(title,gTime,teacher,subject);
-                databasePosts.push().setValue(postMessage);
+
+                if (Timer.getText().toString() != "" ) {
+                    final int timeInt = toMins(time);
+                    Surveyposts sTime = dataSnapshot.getValue(Surveyposts.class);
+                    int totalInt = (sTime.startTime + timeInt);
+                    String gTime = reverseFormat(toStringTime(totalInt));
+                    TitleView.setText("");
+                    TeacherView.setText("");
+                    Timer.setText("");
+                    SubjectView.setText("");
+                    taskedPosts postMessage = new taskedPosts(title, gTime, teacher, subject);
+                    databasePosts.push().setValue(postMessage);
+                }
+
+//                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+//                        .setContentTitle(title +" Due at " + gTime)
+//                        .setContentText("Your scheduled " + title + " task is due at " + gTime)
+//                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
 
             }
@@ -183,6 +196,7 @@ public class addTask extends AppCompatActivity {
 
         });
 
+
         Intent intent = new Intent( addTask.this, Tasks.class);
         startActivity(intent);
 
@@ -198,21 +212,21 @@ public class addTask extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         }
     }
-    private static int toMins(String s) {
+    public static int toMins(String s) {
         String[] hourMin = s.split(":");
-        int hour = Integer.parseInt(hourMin[0]);
-        int mins = Integer.parseInt(hourMin[1]);
+        int hour = Integer.parseInt(hourMin[0].replaceAll("/s+"," "));
+        int mins = Integer.parseInt(hourMin[1].replaceAll("/s+"," "));
         int hoursInMins = hour * 60;
         return hoursInMins + mins;
     }
-    private static String toStringTime(int t) {
+    public static String toStringTime(int t) {
         int hour = t / 60;
         int min = t % 60;
 
         return hour + ":" + min;
     }
     public String reverseFormat(String time){
-        DateFormat df = new SimpleDateFormat("H:m");
+        DateFormat df = new SimpleDateFormat("HH:mm");
         //Date/time pattern of desired output date
         DateFormat outputformat = new SimpleDateFormat("hh:mm aa");
         Date date = null;
@@ -228,5 +242,24 @@ public class addTask extends AppCompatActivity {
 
         return output;
     }
+    private void notification(String title, String gTime){
 
+        String message = "Thank you for registration";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel =
+                    new NotificationChannel("n","n", NotificationManager.IMPORTANCE_DEFAULT);
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"n")
+                .setContentText(title +" Due at " + gTime)
+                .setAutoCancel(true)
+                .setContentText("Your scheduled " + title + " task is due at " + gTime);
+
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+        managerCompat.notify(999,builder.build());
+    }
 }
+
