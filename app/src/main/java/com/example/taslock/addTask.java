@@ -2,12 +2,16 @@ package com.example.taslock;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import android.app.AlarmManager;
 import android.app.NotificationChannel;
+import android.app.NotificationChannelGroup;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -57,6 +61,7 @@ public class addTask extends AppCompatActivity {
     int t2hour, t2minute;
     FirebaseDatabase database;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +78,7 @@ public class addTask extends AppCompatActivity {
         userid = user.getUid();
 
         databasePosts = database.getReference().child(userid);
+        createNotificationChannel();
 
 
 
@@ -196,12 +202,34 @@ public class addTask extends AppCompatActivity {
                 String time = Timer.getText().toString();
                 String timeD = TimerD.getText().toString();
                 String subject = SubjectView.getText().toString();
+                SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
+                Date date = new Date();
+                String timenow = formatter.format(date);
+                int mintimenow = toMins(timenow);
+                int timeTilTask;
                 //
                 if (Timer.getText().toString() != "" ) {
                     final int timeInt = toMins(time);
                     Surveyposts sTime = dataSnapshot.getValue(Surveyposts.class);
                     int totalInt = (sTime.startTime + timeInt);
                     String gTime = reverseFormat(toStringTime(totalInt));
+                    Intent intent1a = new Intent("my.action.string1");
+                    intent1a.putExtra("extra", title);
+                    sendBroadcast(intent1a);
+                    Intent intent1b = new Intent("my.action.string2");
+                    intent1b.putExtra("extra", gTime);
+                    sendBroadcast(intent1b);
+                    Intent intent2 = new Intent(addTask.this, ReminderBroadcast.class);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(addTask.this, 0, intent2, 0);
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+                    long timeAtButtonClick = System.currentTimeMillis();
+
+                    long tenSecsInMilis = 1000 * 10;
+
+                    alarmManager.set(AlarmManager.RTC_WAKEUP,
+                        timeAtButtonClick + tenSecsInMilis,
+                            pendingIntent);
                     TitleView.setText("");
                     TimerD.setText("");
                     Timer.setText("");
@@ -239,6 +267,20 @@ public class addTask extends AppCompatActivity {
 
         closeKeyboard();
         clicked = false;
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void createNotificationChannel() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            CharSequence name = "TaskitReminderChannel";
+            String description = "Channel for Taskit Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("notifyTaskit", name, importance);
+            channel.setDescription(description);
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 
     public void closeKeyboard(){

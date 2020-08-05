@@ -35,7 +35,14 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <receiver android:process=":remote" android:name=".Alarm"></receiver>
+        <receiver android:process=":remote" android:name=".ReminderBroadcast">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="my.action.string1" />
+                <action android:name="my.action.string2" />
+                <!-- and some more actions if you want -->
+            </intent-filter>
+        </receiver>
     </application>
 
 
