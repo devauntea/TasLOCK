@@ -127,7 +127,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="25dp"
                     android:gravity="clip_vertical"
-                    android:text="– Gi Suggestions on Tools and Resources to Help on the Task"
+                    android:text="– Suggestions on Tools and Resources to Help on the Task"
                     android:textColor="#000000"
                     android:textSize="25dp" />
 
@@ -229,7 +229,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="25dp"
                     android:gravity="clip_vertical"
-                    android:text="$45 per student"
+                    android:text="$10 per student"
                     android:textColor="#000000"
                     android:textSize="28dp"
                     android:textStyle="bold" />
