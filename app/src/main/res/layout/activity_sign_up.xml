@@ -64,21 +64,6 @@
             android:textColor="#ffffff"
             android:textColorHint="#F5F5F5" />
 
-        <EditText
-            android:id="@+id/PassView"
-            android:layout_width="264dp"
-            android:layout_height="47dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edittext"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Password"
-            android:inputType="textPersonName"
-            android:textColor="#ffffff"
-            android:textColorHint="#F5F5F5" />
-
 
         <EditText
             android:id="@+id/EmailView"
@@ -91,6 +76,21 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Email"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff"
+            android:textColorHint="#F5F5F5" />
+
+        <EditText
+            android:id="@+id/PassView"
+            android:layout_width="264dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password"
             android:inputType="textPersonName"
             android:textColor="#ffffff"
             android:textColorHint="#F5F5F5" />
