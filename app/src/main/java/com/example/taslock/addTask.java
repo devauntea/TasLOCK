@@ -43,12 +43,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.xml.datatype.Duration;
-
 public class addTask extends AppCompatActivity {
 //    private Spinner spinner;
 //    LinearLayout BoarderView;
     EditText TitleView;
+    EditText TimeView;
+    EditText TeacherView;
     TextView SubjectView;
     DatabaseReference databasePosts;
     boolean clicked = false;
@@ -57,8 +57,6 @@ public class addTask extends AppCompatActivity {
     FirebaseUser user;
     TextView Timer;
     int t1hour, t1minute;
-    TextView TimerD;
-    int t2hour, t2minute;
     FirebaseDatabase database;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -68,7 +66,7 @@ public class addTask extends AppCompatActivity {
         setContentView(R.layout.activity_add_task);
         Timer = findViewById(R.id.Timer);
         TitleView = findViewById(R.id.eventTitle);
-        TimerD = findViewById(R.id.WorkTime);
+        TeacherView = findViewById(R.id.teacher);
         SubjectView = findViewById(R.id.subView);
 //        BoarderView = findViewById(R.id.boarder);
 //        spinner = findViewById(R.id.spinner);
@@ -124,40 +122,6 @@ public class addTask extends AppCompatActivity {
             }
         });
 
-        TimerD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                TimePickerDialog timePickerDialog = new TimePickerDialog(
-                        addTask.this,
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-                        new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                t2hour = hourOfDay;
-                                t2minute = minute;
-
-                                String time = t2hour + ":" + t2minute;
-                                SimpleDateFormat f24Hours = new SimpleDateFormat(
-                                        "HH:mm"
-                                );
-                                try {
-                                    Date date = f24Hours.parse(time);
-                                    SimpleDateFormat f12Hours = new SimpleDateFormat(
-                                            "hh:mm aa"
-                                    );
-                                    TimerD.setText(f12Hours.format(date));
-                                } catch (ParseException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        },12,0,false
-                );
-                timePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                timePickerDialog.updateTime(t2hour,t2minute);
-                timePickerDialog.show();
-            }
-        });
-
 
 
 //        final LottieAnimationView lottieClickFloat = findViewById(R.id.lottieClickSend);
@@ -200,7 +164,7 @@ public class addTask extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 String title = TitleView.getText().toString();
                 String time = Timer.getText().toString();
-                String timeD = TimerD.getText().toString();
+                String teacher = TeacherView.getText().toString();
                 String subject = SubjectView.getText().toString();
                 SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
                 Date date = new Date();
@@ -216,9 +180,6 @@ public class addTask extends AppCompatActivity {
                     Intent intent1a = new Intent("my.action.string1");
                     intent1a.putExtra("extra", title);
                     sendBroadcast(intent1a);
-                    Intent intent1b = new Intent("my.action.string2");
-                    intent1b.putExtra("extra", gTime);
-                    sendBroadcast(intent1b);
                     Intent intent2 = new Intent(addTask.this, ReminderBroadcast.class);
                     PendingIntent pendingIntent = PendingIntent.getBroadcast(addTask.this, 0, intent2, 0);
                     AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -231,10 +192,10 @@ public class addTask extends AppCompatActivity {
                         timeAtButtonClick + tenSecsInMilis,
                             pendingIntent);
                     TitleView.setText("");
-                    TimerD.setText("");
+                    TeacherView.setText("");
                     Timer.setText("");
                     SubjectView.setText("");
-                    taskedPosts postMessage = new taskedPosts(title, gTime, timeD, subject);
+                    taskedPosts postMessage = new taskedPosts(title, gTime, teacher, subject);
                     databasePosts.push().setValue(postMessage);
                 }
 

@@ -2,23 +2,23 @@ package com.example.taslock;
 
 import android.widget.LinearLayout;
 
-import javax.xml.datatype.Duration;
-
 public class taskedPosts {
     String Title;
     String Time;
-    String EndTime;
+    String Teacher;
     String Subject;
+    LinearLayout Boarder;
 
    public taskedPosts() {
 
    }
 
-    public taskedPosts(String Title, String Time, String EndTime, String Subject) {
+    public taskedPosts(String Title, String Time, String Teacher, String Subject) {
         this.Title = Title;
         this.Time = Time;
-        this.EndTime = EndTime;
+        this.Teacher = Teacher;
         this.Subject = Subject;
+        this.Boarder = Boarder;
 
     }
 
@@ -30,11 +30,11 @@ public class taskedPosts {
     }
 
 
-    public String getEndTime() {
-        return EndTime;
+    public String getTeacher() {
+        return Teacher;
     }
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
+    public void setTeacher(String Teacher) {
+        this.Teacher = Teacher;
     }
 
     public String getTime(){ return Time; }
@@ -43,5 +43,6 @@ public class taskedPosts {
     public String getSubject() { return Subject;}
     public void setSubject(String Subject) { this.Subject = Subject; }
 
-
+    public LinearLayout getBoarder() { return Boarder;}
+    public void setBoarder(LinearLayout Boarder) { this.Boarder = Boarder; }
 }

@@ -49,7 +49,7 @@
                     android:gravity="center"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="#000000"
-                    android:textSize="35dp"
+                    android:textSize="40dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -87,10 +87,10 @@
                     android:gravity="bottom|end"
                     android:textColor="#000000"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20dp" />
+                    android:textSize="22dp" />
 
                 <TextView
-                    android:id="@+id/durationTextView"
+                    android:id="@+id/teacherTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|clip_vertical|right"
@@ -100,7 +100,7 @@
                     android:gravity="center"
                     android:textColor="#000000"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="22dp" />
+                    android:textSize="20dp" />
             </LinearLayout>
         </LinearLayout>
 

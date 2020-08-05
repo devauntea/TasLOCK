@@ -23,13 +23,13 @@ public class TaskPostAdapter extends ArrayAdapter<taskedPosts> {
         topicTextView.setText(taskmessage.getTitle());
 
         TextView timeTextView = convertView.findViewById(R.id.timeTextView);
-        timeTextView.setText("Duration " + taskmessage.getTime());
+        timeTextView.setText("Due by " + taskmessage.getTime());
 
-        TextView teacherTextView = convertView.findViewById(R.id.durationTextView);
-        teacherTextView.setText("Due by " + taskmessage.getEndTime());
+        TextView teacherTextView = convertView.findViewById(R.id.teacherTextView);
+        teacherTextView.setText("Teacher: " + taskmessage.getTeacher());
 
         TextView SubTextView = convertView.findViewById(R.id.subTextView);
-        SubTextView.setText("Topic: " + taskmessage.getSubject());
+        SubTextView.setText("Subject: " + taskmessage.getSubject());
 
 //        LinearLayout BoarderView = convertView.findViewById(R.id.boarder);
 //        BoarderView.setBackground( "@drawable/btn" + taskmessage.getBoarder());

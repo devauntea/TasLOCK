@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Lets Learn About You"
             android:textColor="#000000"
@@ -69,7 +69,6 @@
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
                 android:background="@drawable/edittext"
                 android:ems="10"
                 android:gravity="center"
@@ -88,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="What time to you stop doing work?"
+                android:text="What time to you stop doing homework?"
                 android:textColor="#FFFFFF"
                 android:textSize="22dp" />
 
@@ -97,8 +96,6 @@
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-
                 android:background="@drawable/edittext"
                 android:ems="10"
                 android:gravity="center"
@@ -117,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="How long do you spend on a task?"
+                android:text="How long do you spend on work?"
                 android:textColor="#FFFFFF"
                 android:textSize="22dp" />
 
@@ -128,7 +125,6 @@
                 android:layout_gravity="center"
                 android:background="@drawable/edittext"
                 android:ems="10"
-                android:layout_marginTop="15dp"
                 android:entries="@array/time"
                 android:gravity="center"
                 android:inputType="textPersonName"
@@ -158,7 +154,6 @@
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
                 android:scrollbarStyle="insideInset"
-                android:layout_marginTop="15dp"
                 android:scrollbarThumbHorizontal="@color/common_google_signin_btn_text_dark_focused"
                 android:text="Math"
                 android:button="@null"

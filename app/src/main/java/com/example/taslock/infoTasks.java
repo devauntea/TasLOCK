@@ -21,7 +21,7 @@ public class infoTasks extends AppCompatActivity {
     FirebaseUser user;
     TextView Titleview;
     TextView Subjectview;
-    TextView EndTime;
+    TextView Teacherview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +40,8 @@ public class infoTasks extends AppCompatActivity {
                 Titleview.setText(task.getTitle());
                 Subjectview = findViewById(R.id.SubjectView);
                 Subjectview.setText(task.getSubject());
-//                EndTime = findViewById(R.id.EndTimeView);
-//                EndTime.setText(task.getEndTime());
+                Teacherview = findViewById(R.id.TeacherView);
+                Teacherview.setText(task.getTeacher());
 
             }
             @Override
