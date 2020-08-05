@@ -87,7 +87,7 @@
                     android:gravity="bottom|end"
                     android:textColor="#000000"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="22dp" />
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/teacherTextView"
@@ -100,7 +100,7 @@
                     android:gravity="center"
                     android:textColor="#000000"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20dp" />
+                    android:textSize="22dp" />
             </LinearLayout>
         </LinearLayout>
 
