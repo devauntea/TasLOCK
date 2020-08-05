@@ -61,6 +61,10 @@ public class LognPage extends AppCompatActivity {
             }
         });
     }
+    public void mainPG(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 
 }

@@ -73,5 +73,9 @@ public class SignUp extends AppCompatActivity {
         String Email = email.getText().toString();
         email.setText("Email@mail.org");
     };
+    public void mainPG2(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }

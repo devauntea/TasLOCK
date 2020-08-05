@@ -22,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        android:onClick="mainPG3"
         app:srcCompat="@drawable/it" />
 
     <TextView
@@ -49,10 +50,9 @@
         android:layout_marginTop="123dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.727">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,6 +67,7 @@
                 android:layout_width="350dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_marginTop="25dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/btn"
                 android:gravity="center"
@@ -169,7 +170,7 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="10dp"
                     android:gravity="clip_vertical"
                     android:text="–Customizable and Increasable amount of Notifications"
                     android:textColor="#000000"
@@ -180,9 +181,21 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="clip_vertical"
                     android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="clip_vertical"
+                    android:text="– Blocks distractions by locking down the phone"
+                    android:textColor="#000000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="clip_vertical"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="15dp"
                     android:gravity="clip_vertical"
                     android:text="$1.99/mo"
                     android:textColor="#000000"
@@ -214,6 +227,7 @@
                     android:layout_gravity="clip_vertical"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
                     android:layout_marginRight="25dp"
                     android:gravity="clip_vertical"
                     android:text="–Deluxe Subscription Plan that Connects our App to Users School/Program. Comes with Freemium, Premium, and School Premium Benefits That are Instantly Granted to all Students and Teacher Faculty"

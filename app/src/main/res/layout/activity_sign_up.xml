@@ -18,6 +18,7 @@
         android:layout_marginEnd="309dp"
         android:layout_marginRight="309dp"
         android:layout_marginBottom="145dp"
+        android:onClick="mainPG2"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
