@@ -22,7 +22,7 @@
             android:layout_marginLeft="65dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Lets learn about you"
+            android:text="Lets Learn About You"
             android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="What time to you stop working?"
+                android:text="What time to you stop doing homework?"
                 android:textColor="#FFFFFF"
                 android:textSize="22dp" />
 
