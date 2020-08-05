@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9281F3"
+    android:background="#8670FF"
     tools:context=".SignUp">
 
 
@@ -60,7 +60,6 @@
             android:gravity="center"
             android:hint="Full Name"
             android:inputType="textPersonName"
-            android:text="Test"
             android:textColor="#ffffff"
             android:textColorHint="#F5F5F5" />
 
@@ -76,7 +75,6 @@
             android:gravity="center"
             android:hint="Password"
             android:inputType="textPersonName"
-            android:text="Test123"
             android:textColor="#ffffff"
             android:textColorHint="#F5F5F5" />
 
@@ -93,7 +91,6 @@
             android:gravity="center"
             android:hint="Email"
             android:inputType="textPersonName"
-            android:text="Test123@gmail.com"
             android:textColor="#ffffff"
             android:textColorHint="#F5F5F5" />
 
@@ -104,12 +101,13 @@
             android:layout_gravity="bottom|center"
             android:layout_marginTop="120dp"
             android:background="@drawable/button"
+            android:textColor="#FFFFFF"
             android:gravity="center"
             android:paddingLeft="5sp"
             android:paddingRight="5sp"
             android:text="Create Account"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

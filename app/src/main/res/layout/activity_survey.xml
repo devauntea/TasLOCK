@@ -68,7 +68,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="What time do you start working?"
+                android:text="What time do you get home?"
                 android:textColor="#FFFFFF"
                 android:textSize="22dp" />
 
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="What is your worst subject? "
+                android:text="What subjects do you need extra help in?"
                 android:textColor="#FFFFFF"
                 android:textSize="22dp" />
 
@@ -194,9 +194,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
-                android:textSize="20dp"
+                android:text="History"
                 android:textColor="#ffffff"
-                android:text="Global" />
+                android:textSize="20dp" />
 
             <CheckBox
                 android:id="@+id/checkBox5"
@@ -204,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
-                android:text="N/A"
+                android:text="Other"
                 android:textColor="#ffffff"
                 android:textSize="20dp" />
 
