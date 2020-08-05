@@ -13,21 +13,13 @@
         android:layout_height="80dp"
         >
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="65dp"
-            android:layout_height="48dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/it" />
-
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="65dp"
+            android:layout_marginLeft="140dp"
             android:layout_marginTop="22dp"
             android:gravity="center"
             android:text="Survey"
@@ -77,12 +69,12 @@
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:background="@drawable/white"
+                android:background="@drawable/edittext"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="textPersonName"
                 android:text="12:00 am"
-                android:textColor="#000000"
+                android:textColor="#FFFFFF"
                 android:textSize="19dp" />
 
             <Space
@@ -104,12 +96,12 @@
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:background="@drawable/white"
+                android:background="@drawable/edittext"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="textPersonName"
                 android:text="12:00 am"
-                android:textColor="#000000"
+                android:textColor="#FFFFFF"
                 android:textSize="19dp" />
 
             <Space
@@ -131,13 +123,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:background="@drawable/white"
+                android:background="@drawable/edittext"
                 android:ems="10"
                 android:entries="@array/time"
                 android:gravity="center"
                 android:inputType="textPersonName"
                 android:text="1 hour"
-                android:textColor="#000000"
+                android:textColor="#ffffff"
                 android:textSize="19dp" />
 
             <Space
@@ -164,6 +156,8 @@
                 android:scrollbarStyle="insideInset"
                 android:scrollbarThumbHorizontal="@color/common_google_signin_btn_text_dark_focused"
                 android:text="Math"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox"
                 android:textColor="#ffffff"
                 android:textSize="20dp" />
 
@@ -174,12 +168,16 @@
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical"
                 android:text="Science"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox"
                 android:textColor="#ffffff"
                 android:textColorHint="#FFFFFF"
                 android:textSize="19dp" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -190,6 +188,8 @@
 
             <CheckBox
                 android:id="@+id/checkBox4"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -200,6 +200,8 @@
 
             <CheckBox
                 android:id="@+id/checkBox5"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
