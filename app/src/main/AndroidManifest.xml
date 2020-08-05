@@ -3,6 +3,7 @@
     package="com.example.taslock">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <receiver android:process=":remote" android:name=".Alarm"></receiver>
     </application>
+
 
 </manifest>

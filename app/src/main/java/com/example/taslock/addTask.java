@@ -242,24 +242,5 @@ public class addTask extends AppCompatActivity {
 
         return output;
     }
-    private void notification(String title, String gTime){
-
-        String message = "Thank you for registration";
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel channel =
-                    new NotificationChannel("n","n", NotificationManager.IMPORTANCE_DEFAULT);
-
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"n")
-                .setContentText(title +" Due at " + gTime)
-                .setAutoCancel(true)
-                .setContentText("Your scheduled " + title + " task is due at " + gTime);
-
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
-        managerCompat.notify(999,builder.build());
-    }
 }
 
