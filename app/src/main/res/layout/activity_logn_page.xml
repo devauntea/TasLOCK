@@ -93,6 +93,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="mainPG"
-        app:srcCompat="@drawable/it" />
+        app:srcCompat="@drawable/it2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
